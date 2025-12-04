@@ -272,3 +272,146 @@ section[id] {
 .terms-section p {
     margin-bottom: 1rem;
 }
+
+/*News section stlying */
+/* The Stripe-like Vertical Lines */
+    .news-grid {
+      position: relative;
+    }
+    
+    /* Create the vertical dotted line between Date and Content */
+    .news-divider {
+      border-left: 1px dashed #e0e0e0;
+      min-height: 100%;
+    }
+
+    /* Custom Typography matches */
+    .news-date {
+      color: #6b7280; /* Cool gray */
+      font-size: 0.9rem;
+      padding-top: 0.2rem;
+    }
+
+    .news-category {
+      color: #635bff; /* Stripe Purple/Blue */
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .news-title {
+      font-weight: 700;
+      font-size: 1.1rem;
+      line-height: 1.4;
+      color: #111827;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .news-title:hover {
+      color: #635bff;
+    }
+
+    .news-image {
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      transition: transform 0.2s;
+    }
+
+    .news-row:hover .news-image {
+      transform: scale(1.02);
+    }
+    
+    .news-row {
+      padding-bottom: 3rem;
+    }
+
+    /* News Article Styling*/
+    .article-wrapper {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+  font-family: 'Rubik', sans-serif;
+  color: #0a2540; /* Stripe's deep navy text */
+  line-height: 1.65;
+}
+
+/* --- Title Section --- */
+.article-category {
+  text-transform: uppercase;
+  color: #635bff;         /* Stripe purple */
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+}
+
+.article-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.article-date {
+  color: #6b7280;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+}
+
+/* --- Body Typography --- */
+.article-wrapper p {
+  margin-bottom: 1.4rem;
+  font-size: 1.06rem;
+}
+
+.article-wrapper h3 {
+  font-weight: 700;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  font-size: 1.35rem;
+  color: #0a2540;
+}
+
+/* Lists */
+.article-wrapper ul {
+  margin-left: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.article-wrapper li {
+  margin-bottom: 0.7rem;
+  font-size: 1.05rem;
+}
+
+/* --- Section Divider (Thin & Soft) --- */
+.section-divider {
+  margin: 3rem 0;
+  border-top: 1px solid #e5e7eb; /* Stripe-like soft gray */
+}
+
+/* --- Emphasis Text --- */
+.highlight {
+  font-weight: 600;
+  color: #111827;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .article-wrapper {
+    padding: 2rem 1rem;
+  }
+
+  .article-title {
+    font-size: 1.7rem;
+  }
+
+  .article-wrapper h3 {
+    font-size: 1.25rem;
+  }
+}
