@@ -274,7 +274,6 @@ section[id] {
 }
 
 /*News section stlying */
-/* The Stripe-like Vertical Lines */
     .news-grid {
       position: relative;
     }
@@ -293,7 +292,7 @@ section[id] {
     }
 
     .news-category {
-      color: #635bff; /* Stripe Purple/Blue */
+      color: #635bff; 
       font-size: 0.75rem;
       font-weight: 700;
       text-transform: uppercase;
