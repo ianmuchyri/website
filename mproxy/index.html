@@ -1,56 +1,47 @@
-<!-- rex.html -->
+<!-- mproxy.html -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Rex — IoT Rule Engine | Abstract Machines</title>
-  <meta name="description" content="Rex is a lightweight, stream-based rule engine for real-time IoT event processing and automation.">
-  <meta name="keywords" content="Rex, Rule Engine, IoT Automation, Stream Processing, Abstract Machines, SuperMQ">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://www.absmach.eu/rex/">
 
-  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="shortcut icon" href="/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <meta name="apple-mobile-web-app-title" content="Abstract Machines" />
-  <link rel="manifest" href="/site.webmanifest" />
+  <title>mProxy — Multi-Protocol IoT Gateway | Abstract Machines</title>
 
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "BreadcrumbList",
-          "itemListElement": [{
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://www.absmach.eu/"
-          },{
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Products",
-            "item": "https://www.absmach.eu/products/"
-          },{
-            "@type": "ListItem",
-            "position": 3,
-            "name": "Rex",
-            "item": "https://www.absmach.eu/rex/"
-          }]
-        },
-        {
-          "@type": "SoftwareApplication",
-          "name": "Rex",
-          "operatingSystem": "Linux, Multi-platform",
-          "applicationCategory": "DeveloperApplication",
-          "description": "Rex is a lightweight rule engine for real-time event processing in IoT."
-        }
-      ]
-    }
-  </script>
+  <!-- Primary Metadata -->
+  <meta name="title" content="mProxy — Multi-Protocol IoT Gateway | Abstract Machines" />
+  <meta name="description"
+    content="Unlock seamless IoT connectivity with mProxy. A high-performance gateway for MQTT & CoAP featuring real-time payload transformation and fine-grained access control." />
+  <meta name="keywords"
+    content="mProxy, IoT Gateway, API Gateway, MQTT, CoAP, HTTP, WebSocket, Packet Manipulation, Observability" />
+  <meta name="author" content="Abstract Machines" />
+  <meta name="robots" content="index, follow" />
+
+  <link rel="canonical" href="https://www.absmach.eu/mproxy" />
+
+  <!-- Open Graph Links-->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Abstract Machines" />
+  <meta property="og:url" content="https://www.absmach.eu/mproxy" />
+  <meta property="og:title" content="mProxy — Multi-Protocol IoT Gateway" />
+  <meta property="og:description"
+    content="Unlock seamless IoT connectivity with mProxy. A high-performance gateway for MQTT & CoAP featuring real-time payload transformation and fine-grained access control." />
+  <meta property="og:image" content="https://www.absmach.eu/img/logos/social-preview.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="mproxy - WebAssembly Orchestrator by Abstract Machines" />
+
+  <!-- Twitter Card Links-->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@absmach" />
+  <meta name="twitter:title" content="mProxy — Multi-Protocol IoT Gateway" />
+  <meta name="twitter:description"
+    content="Unlock seamless IoT connectivity with mProxy. A high-performance gateway for MQTT & CoAP featuring real-time payload transformation and fine-grained access control." />
+  <meta name="twitter:image" content="https://www.absmach.eu/img/logos/social-preview.png" />
+  <meta name="twitter:image" content="https://www.absmach.eu/img/logos/social-preview.png" />
+  <meta name="twitter:image:alt" content="mproxy - WebAssembly Orchestrator by Abstract Machines" />
+
+  <link rel="icon" href="/img/logos/abstract-machines_logo_symbol-white.svg" type="image/svg+xml">
 
   <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
@@ -82,8 +73,7 @@
               <li><a class="dropdown-item" target="_blank" href="https://magistrala.absmach.eu">Magistrala</a></li>
               <li><a class="dropdown-item" href="/supermq">SuperMQ</a></li>
               <li><a class="dropdown-item" href="/propeller">Propeller</a></li>
-              <li><a class="dropdown-item" href="/mproxy">mProxy</a></li>
-              <li><a class="dropdown-item" href="javascript:void(0)">Rex</a></li>
+              <li><a class="dropdown-item" href="javascript:void(0)">mProxy</a></li>
               <li>
                 <hr class="dropdown-divider">
               </li>
@@ -129,46 +119,49 @@
       </div>
     </div>
   </nav>
-  <!-- End of Navbar -->
 
   <!-- Hero Section -->
   <section id="header" class="py-5 mt-md-5" style="font-size: 21px; min-height: 100vh; margin: 0;">
     <div class="container">
       <div class="row mt-md-5">
         <div class="col-md-6 mt-5">
-          <h1>Rex</h1>
-          <p>Rex is a lightweight rule engine for real-time event processing and decision automation across the Abstract
-            Machines IoT ecosystem. It allows you to define declarative rules that act on streaming data, making IoT
-            deployments smarter and more autonomous.</p>
+          <h1>mProxy</h1>
+          <p>mProxy is a lightweight, scalable, and customizable IoT API gateway. It facilitates seamless communication
+            across multiple protocols including MQTT, CoAP, HTTP, and WebSocket. Built for flexibility, it supports
+            real-time packet manipulation, pluggable authentication, and deep observability.</p>
           <div class="mt-4">
-            <a href="https://github.com/absmach/rex" class="btn btn-warning d-inline-block" target="_blank">Download
-              Rex</a>
+            <a href="https://github.com/absmach/mproxy" class="btn btn-warning d-inline-block mb-2"
+              target="_blank">Download mProxy</a>
+            <a href="https://github.com/absmach/mproxy#readme" class="btn btn-dark d-inline-block mb-2" target="_blank">Read
+              the Docs </a>
           </div>
         </div>
         <div class="col-md-6 mt-5">
           <div class="d-flex align-items-center justify-content-center">
-            <img src="../img/patterns/rex.png" alt="Rex banner" class="img-fluid-large">
+            <img src="../img/patterns/mproxy.png" alt="mProxy banner" class="img-fluid-large">
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- What is Rex -->
+  <!-- What is mProxy -->
   <section class="py-5" style="font-size: 21px; background-color: #F5F5F5;">
     <div class="container">
       <div class="row">
         <div class="col-md-6 d-flex align-items-center justify-content-center">
-          <img src="../img/rex-concept.png" alt="Rex Concept" class="img-fluid">
+          <img src="../img/mproxy-features.jpeg" alt="mProxy Concept" class="img-fluid">
         </div>
         <div class="col-md-6 mt-5">
-          <h1>What is Rex</h1>
-          <p>Rex enables declarative rule definition for intelligent, automated decision-making. It listens to message
-            streams from SuperMQ and evaluates user-defined conditions to trigger actions.</p>
-          <p>Built to scale from edge to cloud, Rex can run inline with your IoT gateway or as part of a centralized
-            deployment, giving you flexibility over where intelligence lives.</p>
-          <p>With a lightweight engine and YAML-based rule definitions, Rex empowers developers to build automation
-            logic quickly and adaptively.</p>
+          <h1>What is mProxy</h1>
+          <p>mProxy operates as an intelligent middle-layer that inspects and routes traffic between IoT devices and
+            services. Upon connection, it establishes a session with a remote protocol server, piping packets while
+            applying logic hooks for inspection or modification.</p>
+          <p>It is designed to scale horizontally and can be deployed flexibly: as a sidecar alongside existing
+            microservices (like an MQTT broker), as a standalone service for direct device interaction, or even embedded
+            as a library in Go applications.</p>
+          <p>With its modular architecture, mProxy allows you to extend support for new IoT protocols or middleware,
+            making it a future-proof solution for evolving IoT ecosystems.</p>
         </div>
       </div>
     </div>
@@ -179,75 +172,79 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12 text-center mt-5 mb-5">
-          <h2>Rex Features</h2>
+          <h2>mProxy Features</h2>
         </div>
       </div>
       <div class="row">
         <div class="col-md-6 mb-4">
           <div class="row">
             <div class="col-3 text-center">
-              <i class="fas fa-stream fa-2x mb-3"></i>
+              <i class="fas fa-project-diagram fa-2x mb-3"></i>
             </div>
             <div class="col-9">
-              <h5 class="text-left mb-3">Stream-Based Processing</h5>
-              <p class="text-left">Rex listens to high-throughput event streams and evaluates rule conditions in real
-                time.</p>
+              <h5 class="text-left mb-3">Multi-Protocol Support</h5>
+              <p class="text-left">Native support for MQTT, CoAP, HTTP, and WebSocket. Easily extendable to interface
+                with additional custom protocols.</p>
             </div>
           </div>
         </div>
         <div class="col-md-6 mb-4">
           <div class="row">
             <div class="col-3 text-center">
-              <i class="fas fa-file-code fa-2x mb-3"></i>
+              <i class="fas fa-random fa-2x mb-3"></i>
             </div>
             <div class="col-9">
-              <h5 class="text-left mb-3">Declarative Rules</h5>
-              <p class="text-left">Write simple, readable automation rules using YAML, no programming required.</p>
+              <h5 class="text-left mb-3">On-the-Fly Manipulation</h5>
+              <p class="text-left">Inject custom logic or interceptors to modify incoming and outgoing messages in
+                real-time without altering the backend.</p>
             </div>
           </div>
         </div>
         <div class="col-md-6 mb-4">
           <div class="row">
             <div class="col-3 text-center">
-              <i class="fas fa-terminal fa-2x mb-3"></i>
+              <i class="fas fa-user-lock fa-2x mb-3"></i>
             </div>
             <div class="col-9">
-              <h5 class="text-left mb-3">Action Execution</h5>
-              <p class="text-left">Trigger commands, send messages, or activate workflows based on matched conditions.
-              </p>
+              <h5 class="text-left mb-3">Pluggable Authentication</h5>
+              <p class="text-left">Supports OAuth, JWT, and API Keys with fine-grained access control. Swap auth modules
+                to fit enterprise identity systems.</p>
             </div>
           </div>
         </div>
         <div class="col-md-6 mb-4">
           <div class="row">
             <div class="col-3 text-center">
-              <i class="fas fa-microchip fa-2x mb-3"></i>
+              <i class="fas fa-eye fa-2x mb-3"></i>
             </div>
             <div class="col-9">
-              <h5 class="text-left mb-3">Runs on the Edge</h5>
-              <p class="text-left">Deploy Rex next to your devices for ultra-low-latency logic at the network edge.</p>
+              <h5 class="text-left mb-3">Observability</h5>
+              <p class="text-left">Real-time metrics, logging, and tracing. Integrates easily with Prometheus,
+                and OpenTelemetry for troubleshooting.</p>
             </div>
           </div>
         </div>
         <div class="col-md-6 mb-4">
           <div class="row">
             <div class="col-3 text-center">
-              <i class="fas fa-expand-arrows-alt fa-2x mb-3"></i>
+              <i class="fas fa-server fa-2x mb-3"></i>
             </div>
             <div class="col-9">
-              <h5 class="text-left mb-3">Highly Extensible</h5>
-              <p class="text-left">Easily extend Rex with custom actions or connectors tailored to your use case.</p>
+              <h5 class="text-left mb-3">Scalable & Lightweight</h5>
+              <p class="text-left">Optimized Golang architecture for low resource usage, capable of handling
+                high-throughput in data centers or edge devices.</p>
             </div>
           </div>
         </div>
         <div class="col-md-6 mb-4">
           <div class="row">
             <div class="col-3 text-center">
-              <i class="fas fa-code-branch fa-2x mb-3"></i>
+              <i class="fas fa-cubes fa-2x mb-3"></i>
             </div>
             <div class="col-9">
-              <h5 class="text-left mb-3">Open-Source and Lightweight</h5>
-              <p class="text-left">Rex is open-source under Apache 2.0 and optimized for low memory and CPU usage.</p>
+              <h5 class="text-left mb-3">Flexible Deployment</h5>
+              <p class="text-left">Run it as a sidecar, a standalone gateway, or import it as a library. Fits perfectly
+                into Kubernetes pods or simple binaries.</p>
             </div>
           </div>
         </div>
@@ -272,7 +269,7 @@
             <div class="input-group">
               <input type="email" class="form-control" name="EMAIL" id="mce-EMAIL" placeholder="Enter your email"
                 aria-label="Email" aria-describedby="subscribe-btn" required="">
-              <div hidden=""><input type="hidden" name="tags" value="8115259"></div>
+              <div hidden=""><input type="hidden" name="tags" value="8115259,8115264,8115263"></div>
               <button class="btn bg-deep-blue" type="submit" id="subscribe-btn">Subscribe</button>
             </div>
 
@@ -305,6 +302,9 @@
   </section>
   <!-- End of Newsletter section -->
 
+
+
+
   <!-- Footer -->
   <footer class="bg-dark text-white py-3">
     <div class="container">
@@ -334,8 +334,8 @@
         <!-- Contact us -->
         <div class="col mb-4 text-center text-md-start">
           <h5>Contact Us</h5>
-          <p><i class="fas fa-envelope me-2"></i><a href="mailto:info@absmach.eu"
-              class="text-white">info@absmach.eu</a></p>
+          <p><i class="fas fa-envelope me-2"></i><a href="mailto:info@abstractmachines.fr"
+              class="text-white">info@abstractmachines.fr</a></p>
           <p><img src="/img/logos/matrix-logo-white.svg" height="28" width="60" alt="Matrix Logo" class="me-2">
             <a href="https://matrix.to/#/#absmach:matrix.org" class="text-white" target="_blank">Chat on Matrix</a>
           </p>
@@ -370,6 +370,9 @@
     </div>
   </footer>
   <!-- End of Footer section -->
+
+
+
 
   <!-- Add Bootstrap JavaScript -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
