@@ -29,7 +29,7 @@ category: blog
 featured: true
 tags:
   - Web Development
-  - Python
+  - Magistrala
 ---
 ```
 
@@ -53,15 +53,15 @@ Below the closing `---`, write in standard Markdown.
 
 ### Optional Fields
 
-| Field          | Options                            | Default          | Description           |
-| -------------- | ---------------------------------- | ---------------- | --------------------- |
-| `category`     | blog, announcement, news, tutorial | `blog`           | Post category         |
-| `featured`     | `true` or omit                     | -                | Featured badge        |
-| `tags`         | List of strings                    | `[]`             | Post tags             |
-| `readingTime`  | `"5 min"`                          | Auto-calculated  | Reading time estimate |
-| `coverImage`   | Path                               | None             | Header image          |
-| `ogImage.url`  | Path                               | Cover or default | Social media image    |
-| `canonicalUrl` | Full URL                           | Auto-generated   | Canonical URL         |
+| Field          | Options                                           | Default          | Description           |
+| -------------- | ------------------------------------------------- | ---------------- | --------------------- |
+| `category`     | blog, announcement, news, tutorial                | `blog`           | Post category         |
+| `featured`     | `true` or omit                                    | -                | Featured badge        |
+| `tags`         | List of strings (e.g Magistrala, SuperMQ, FluxMQ) | `[]`             | Post tags             |
+| `readingTime`  | `"5 min"`                                         | Auto-calculated  | Reading time estimate |
+| `coverImage`   | Path                                              | None             | Header image          |
+| `ogImage.url`  | Path                                              | Cover or default | Social media image    |
+| `canonicalUrl` | Full URL                                          | Auto-generated   | Canonical URL         |
 
 ## 2. Add Images (Optional)
 
