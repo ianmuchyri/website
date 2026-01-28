@@ -653,41 +653,68 @@
       });
     })();
   </script>
+
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const categoryButtons = document.querySelectorAll('.category-filter');
       const blogCards = document.querySelectorAll('.mg-blog-card');
 
+      function applyCategoryFilter(selected, updateURL = false) {
+        selected = selected.toLowerCase();
+
+        categoryButtons.forEach(b => {
+          b.classList.remove('bg-dark', 'active');
+          b.classList.add('bg-secondary');
+
+          if (b.dataset.category.toLowerCase() === selected) {
+            b.classList.remove('bg-secondary');
+            b.classList.add('bg-dark', 'active');
+          }
+        });
+
+        blogCards.forEach(card => {
+          if (selected === 'all') {
+            card.style.display = '';
+            return;
+          }
+
+          const tags = card.querySelectorAll('.mg-blog-tag');
+          let hasMatch = false;
+
+          tags.forEach(tag => {
+            if (tag.textContent.toLowerCase() === selected) {
+              hasMatch = true;
+            }
+          });
+
+          card.style.display = hasMatch ? '' : 'none';
+        });
+
+        if (updateURL) {
+          const url = new URL(window.location);
+          if (selected === 'all') {
+            url.searchParams.delete('category');
+          } else {
+            url.searchParams.set('category', selected);
+          }
+          window.history.replaceState({}, '', url);
+        }
+      }
+
       categoryButtons.forEach(btn => {
         btn.addEventListener('click', () => {
-          const selected = btn.dataset.category.toLowerCase();
-
-          categoryButtons.forEach(b => {
-            b.classList.remove('btn-primary', 'active');
-            b.classList.add('btn-secondary');
-          });
-          btn.classList.remove('btn-secondary');
-          btn.classList.add('btn-primary', 'active');
-
-          blogCards.forEach(card => {
-            if (selected === 'all') {
-              card.style.display = '';
-              return;
-            }
-
-            const tags = card.querySelectorAll('.mg-blog-tag');
-            let hasMatch = false;
-
-            tags.forEach(tag => {
-              if (tag.textContent.toLowerCase() === selected) {
-                hasMatch = true;
-              }
-            });
-
-            card.style.display = hasMatch ? '' : 'none';
-          });
+          applyCategoryFilter(btn.dataset.category, true);
         });
       });
+
+      const params = new URLSearchParams(window.location.search);
+      const categoryFromURL = params.get('category');
+
+      if (categoryFromURL) {
+        applyCategoryFilter(categoryFromURL);
+      } else {
+        applyCategoryFilter('all');
+      }
     });
   </script>
 
