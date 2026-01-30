@@ -1,4 +1,5 @@
 blogs-builder
+local-server
 vendor/
 *.exe
 *.test

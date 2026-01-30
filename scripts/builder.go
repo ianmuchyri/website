@@ -17,6 +17,7 @@ import (
 	meta "github.com/yuin/goldmark-meta"
 	"github.com/yuin/goldmark/extension"
 	"github.com/yuin/goldmark/parser"
+	"github.com/yuin/goldmark/renderer/html"
 )
 
 type Builder struct {
@@ -66,6 +67,9 @@ func (b *Builder) Build() error {
 		),
 		goldmark.WithParserOptions(
 			parser.WithAutoHeadingID(),
+		),
+		goldmark.WithRendererOptions(
+			html.WithHardWraps(),
 		),
 	)
 

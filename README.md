@@ -28,6 +28,21 @@ To add a new blog post, follow these steps:
 3. Commit both the source Markdown files **and** the generated files in the `blog/` folder.
 4. Open a Pull Request.
 
+## Running locally
+To run the built website locally, first build it with:
+```bash
+make build
+```
+Then, you can run it with:
+```bash
+make serve
+```
+Open your browser at http://localhost:8080.
+If you want to change the port (in case 8080 is already taken), you can run:
+```bash
+PORT=8081 make serve
+```
+
 ## Documentation
 
 - [How to Write a Blog Post](WRITING.md)
