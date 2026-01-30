@@ -22,5 +22,4 @@ clean: ## Clean generated files and cache
 
 serve: ## Serve generated files locally
 	@echo "Serving generated files..."
-	@cd scripts/server && go build -o ../../local-server
-	@./local-server -port=$(PORT)
+	@go run github.com/absmach/watchdoc@main -port=$(PORT) -watch-dirs="content/blogs" -cmd="make build"
