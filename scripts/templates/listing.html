@@ -73,6 +73,11 @@
     .navbar-nav .nav-link {
       color: black !important;
     }
+
+    .sidebar-logo {
+      max-width: 100%;
+      height: auto;
+    }
   </style>
 </head>
 
@@ -326,9 +331,9 @@
           <!-- Info Card -->
           <div class="card mb-5 rounded-3">
             <div class="card-body p-4">
-              <a class="navbar-brand" href="/">
-                <img src="/img/logos/abstract-machines_logo_landscape-black.jpg" alt="Magistrala" height="30"
-                  width="250" />
+              <a class="navbar-brand d-block" href="/">
+                <img src="/img/logos/abstract-machines_logo_landscape-black.jpg" alt="Magistrala"
+                  class="img-fluid sidebar-logo" />
               </a>
               <!-- <h4 class="card-title fw-bold mb-3">Abstract Machines</h4> -->
               <p class="card-text text-muted mt-3 mb-4">
@@ -336,7 +341,7 @@
               </p>
 
               <h6 class="fw-bold mb-3">Connect with us</h6>
-              <div class="d-flex gap-3">
+              <div class="d-flex flex-wrap gap-3">
                 <a href="https://github.com/absmach" target="_blank"
                   class="p-2 text-decoration-none link-blue-sm d-flex align-items-center justify-content-center"
                   style="width: 40px; height: 40px; transition: all 0.2s;"
